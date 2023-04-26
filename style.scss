@@ -1,0 +1,103 @@
+// lear
+// Four card feature section
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+// Colors
+$darkColor: #1f1f1f;
+$lightColor: #f2f2f2;
+$lightGray: #78797f;
+$darkGray: #4d4f62;
+$cyanColor: #44d3d2;
+$redColor: #ea5454;
+$orangeColor: #fcae4a;
+$blueColor: #549ef2;
+$shadowColor: #4f4faf2f;
+
+body {
+  background-color: $lightColor;
+  color: $lightGray;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: normal;
+}
+
+.sub-title {
+  font-size: 2.2rem;
+  color: $darkGray;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem auto;
+
+  .big-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .box {
+    height: 240px;
+    width: min(380px, 90vw);
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 5px;
+    position: relative;
+    text-align: left;
+    box-shadow: 0 5px 0.5rem $shadowColor;
+    border-top: 3.5px solid;
+
+    &.red {
+      border-color: $redColor;
+    }
+
+    &.cyan {
+      border-color: $cyanColor;
+    }
+
+    &.orange {
+      border-color: $orangeColor;
+    }
+
+    &.blue {
+      border-color: $blueColor;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      color: $darkColor;
+    }
+
+    p {
+      margin-top: 0.5rem;
+    }
+
+    img {
+      width: 68px;
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+    }
+  }
+}
+
+// For Smaller Devices
+@media screen and (max-width: 1232px) {
+  .container {
+    flex-direction: column;
+  }
+}
